@@ -24,9 +24,8 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
-# Trained model files
-models/*
-!models/.gitkeep
+# Trained machine learning models
+models/*.joblib
 
 # Generated reports
 reports/figures/*
