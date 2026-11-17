@@ -1,8 +1,17 @@
-def test_ml_libraries_are_available():
-    import numpy
-    import pandas
-    import sklearn
+import importlib
 
-    assert numpy.__version__
-    assert pandas.__version__
-    assert sklearn.__version__
+def test_ml_libraries_are_available():
+    """Check that essential ML libraries are installed."""
+
+    required_libraries = [
+        "pandas",
+        "numpy",
+        "sklearn",
+        "joblib",
+        "pytest",
+    ]
+
+    for library in required_libraries:
+        module = importlib.import_module(library)
+        assert module is not None
+
